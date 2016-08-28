@@ -1,0 +1,18 @@
+#!/bin/bash -x
+#
+# This simple script builds the application driven by
+# make using the gcc accel container.
+#
+# It forwards a possibly configured apt_proxy. Call example:
+#
+#  apt_proxy=http://apt:3142 ./build
+#
+
+# Build the image
+docker build -t gcc-accel --build-arg="apt_proxy=$apt_proxy" .
+
+# Now extract the generated binary
+docker run gcc-accel cat mandel >mandel
+chmod a+x mandel
+docker run gcc-accel cat mandel-accel >mandel-accel
+chmod a+x mandel-accel
