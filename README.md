@@ -12,6 +12,19 @@ the Dockerfile in detail.
 
 ## Example
 
-A very simple implementation of the mandelbrot algorithm is also provided within the project. You can compile it by executing
-the ```build``` example. The requirement is a Docker installation. The resulting binary has accelerator offloading enabled which
+A very simple implementation of the mandelbrot algorithm is also provided in the context of the the project
+and the mentioned article. You can compile it by executing the ```build``` script like this:
+```
+ $ ./build
+```
+The requirement is a working Docker installation. The resulting binary has accelerator offloading enabled that
 is used if the environment from which it is started, provides it.
+
+The Docker image creating during this process, is based on Debian. Among other things, it downloads some
+Debian packages. If you are using some package caching mechanism in your system environment, or need another
+form of a proxy to download things, you can use the ```apt_proxy``` environment variable to direct this.
+Example:
+
+```
+ $ apt_proxy=http://apt:3142 ./build
+```
