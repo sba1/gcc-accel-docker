@@ -2,9 +2,10 @@
 
 This project consists of a Dockefile that demonstrate the steps how to get a gcc compiler that has accelerator offloading
 enabled. Note that is not possible to actually run such accelerator-enabled executables
-within the container. To do so, most likely, you have to perform similar steps on your target platform (or you extract
-necessary runtime from the Docker container). In principle, there is also the possibility to take adavantage of accelerator
-offloading within a container, but this is, at least for now, not followed here.
+within the container provided by this project. To execute the binary on your platform, you have to redo the steps of the
+Dockerfile on your platform (or you extract necessary runtime from the Docker container). In principle, there is also
+the possibility to take adavantage of accelerator offloading within a container, but this is, at least for now, not
+followed here.
 
 This project accompanies the short German article
 http://www.heise.de/developer/artikel/Accelerator-Offloading-mit-GCC-3317330.html which explains the steps done within
