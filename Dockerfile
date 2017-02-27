@@ -42,9 +42,9 @@ RUN make install DESTDIR=$HOME/offloading
 
 # Prepare gcc source
 WORKDIR ..
-RUN wget https://ftp.gnu.org/gnu/gcc/gcc-6.1.0/gcc-6.1.0.tar.bz2
-RUN tar xjf gcc-6.1.0.tar.bz2
-RUN mv gcc-6.1.0 gcc
+RUN wget https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.bz2
+RUN tar xjf gcc-6.3.0.tar.bz2
+RUN mv gcc-6.3.0 gcc
 
 # Prepare newlib
 RUN git clone https://github.com/MentorEmbedded/nvptx-newlib/
